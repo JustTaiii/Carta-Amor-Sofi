@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff7f5" />
+  <title>Cartas que guardan secretos · San Valentín</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="hearts-rain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Cartas que guardan secretos">
+      <span class="brand-mark">♥</span>
+      <span><strong>cartas</strong><em>que guardan secretos</em></span>
+    </a>
+    <div class="header-actions">
+      <div class="music-control">
+        <span class="music-note" aria-hidden="true">♫</span>
+        <span class="music-label">Melodía suave</span>
+        <button class="switch" id="musicToggle" type="button" role="switch" aria-checked="false" aria-label="Activar melodía de violín suave">
+          <span></span>
+        </button>
+      </div>
+      <button class="outline-button small-button" id="previewButton" type="button">Vista previa <span>↗</span></button>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero-section page-width">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> Una carta para guardar por siempre</p>
+        <h1>El amor se escribe<br /><span>despacio.</span></h1>
+        <p class="hero-intro">Diseña un rincón secreto para tus recuerdos, tus palabras y ese día que no quieres olvidar.</p>
+        <div class="hero-cta-row">
+          <a class="primary-button" href="#sobre">Abrir mi carta <span>→</span></a>
+          <span class="microcopy">Hecha con cariño, para alguien especial</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun-disc"></div>
+        <div class="hero-sprig sprig-left">⌁</div>
+        <div class="hero-sprig sprig-right">⌁</div>
+        <div class="envelope-illustration">
+          <div class="envelope-shadow"></div>
+          <div class="envelope-body">
+            <div class="envelope-flap"></div>
+            <div class="envelope-paper">
+              <small>Para ti,</small>
+              <strong>con todo<br />mi amor</strong>
+              <span>14 · 02 · 2025</span>
+            </div>
+            <div class="illustration-seal seal-rose">♥</div>
+          </div>
+        </div>
+        <p class="art-caption">un pequeño lugar<br /><em>para nosotros</em></p>
+      </div>
+    </section>
+
+    <section class="editor-section page-width" id="sobre">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span></span> Paso 01</p>
+          <h2>Abre tu sobre virtual</h2>
+        </div>
+        <p>Escribe algo que solo ustedes dos puedan leer. Cuando esté listo, pulsa el sello para abrirlo.</p>
+      </div>
+
+      <div class="envelope-workspace">
+        <div class="letter-preview" id="letterPreview">
+          <div class="letter-topline"><span>♥ cartas que guardan secretos</span><span id="previewDate">14 · 02 · 2025</span></div>
+          <div class="letter-content">
+            <p class="letter-greeting" id="previewGreeting">Para mi persona favorita,</p>
+            <p class="letter-message" id="previewMessage">Escribe aquí unas palabras que se queden a vivir en el corazón...</p>
+            <p class="letter-signature" id="previewSignature">Con amor,<br /><span>tu persona</span></p>
+          </div>
+          <div class="letter-flourish">✦</div>
+        </div>
+
+        <div class="envelope-editor">
+          <div class="editor-label-row"><span class="step-number">01</span><div><strong>Tu mensaje</strong><small>Hazlo tan único como lo que sienten</small></div></div>
+          <label for="recipientInput">Para</label>
+          <input id="recipientInput" type="text" value="mi persona favorita" maxlength="32" autocomplete="off" />
+          <label for="messageInput">Mensaje secreto</label>
+          <textarea id="messageInput" rows="5" maxlength="260" placeholder="Escribe algo bonito...">Escribe aquí unas palabras que se queden a vivir en el corazón...</textarea>
+          <label for="signatureInput">Firma</label>
+          <input id="signatureInput" type="text" value="tu persona" maxlength="28" autocomplete="off" />
+          <div class="character-count"><span id="characterCount">70</span> / 260 caracteres</div>
+          <button class="dark-button full-button" id="openEnvelopeButton" type="button">Abrir el sobre <span>→</span></button>
+          <p class="hint"><span>✦</span> Tu mensaje se guarda solo en este dispositivo.</p>
+        </div>
+      </div>
+
+      <div class="design-row">
+        <div class="design-control">
+          <div class="control-heading"><span class="control-icon">✥</span><div><strong>Elige tu sello</strong><small>Un secreto bien guardado</small></div></div>
+          <div class="seal-options" role="group" aria-label="Diseños de sello de cera">
+            <button class="seal-option active" type="button" data-seal="rose" aria-label="Sello rosa"><span class="wax wax-rose">♥</span><small>Rosa</small></button>
+            <button class="seal-option" type="button" data-seal="burgundy" aria-label="Sello vino"><span class="wax wax-burgundy">✦</span><small>Vino</small></button>
+            <button class="seal-option" type="button" data-seal="gold" aria-label="Sello dorado"><span class="wax wax-gold">∞</span><small>Dorado</small></button>
+          </div>
+        </div>
+        <div class="design-control">
+          <div class="control-heading"><span class="control-icon flower-icon">❀</span><div><strong>Borde floral</strong><small>Para tus recuerdos compartidos</small></div></div>
+          <div class="border-options" role="group" aria-label="Bordes florales">
+            <button class="border-option active" type="button" data-border="bloom"><span class="border-swatch swatch-bloom"></span><small>Ramillete</small></button>
+            <button class="border-option" type="button" data-border="vine"><span class="border-swatch swatch-vine"></span><small>Enredadera</small></button>
+            <button class="border-option" type="button" data-border="petals"><span class="border-swatch swatch-petals"></span><small>Pétalos</small></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="memory-section page-width">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow"><span></span> Paso 02</p>
+          <h2>Los pequeños momentos</h2>
+        </div>
+        <p>Porque una historia de amor también vive en las fotos borrosas, los viajes improvisados y los lugares donde todo empezó.</p>
+      </div>
+      <div class="memory-grid">
+        <div class="gallery-card card-surface">
+          <div class="card-header">
+            <div><span class="card-kicker">Álbum compartido</span><h3>Nuestros recuerdos</h3></div>
+            <label class="upload-button" for="photoUpload">+ Añadir fotos</label>
+            <input id="photoUpload" type="file" accept="image/*" multiple hidden />
+          </div>
+          <div class="gallery-frame frame-bloom" id="galleryFrame">
+            <div class="gallery-grid" id="galleryGrid">
+              <figure class="photo-tile large-photo"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=85" alt="Dos personas compartiendo un momento al aire libre" /><figcaption>Donde empezó todo <span>♡</span></figcaption></figure>
+              <figure class="photo-tile"><img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=700&q=85" alt="Pareja abrazándose junto al mar" /><figcaption>Ese atardecer <span>♡</span></figcaption></figure>
+              <figure class="photo-tile"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=85" alt="Paisaje de un viaje compartido" /><figcaption>Volveremos aquí <span>♡</span></figcaption></figure>
+              <button class="add-photo-tile" type="button" id="addPhotoTile"> <span>+</span> <small>Tu próximo<br />recuerdo</small></button>
+            </div>
+          </div>
+          <p class="card-footnote"><span>✦</span> Puedes subir hasta 12 fotos · Solo se guardan en tu navegador</p>
+        </div>
+
+        <div class="countdown-card card-surface">
+          <div class="card-header"><div><span class="card-kicker">Cuenta atrás</span><h3>Faltan...</h3></div><span class="calendar-icon">▣</span></div>
+          <p class="countdown-date-label">Para nuestro día especial</p>
+          <div class="date-picker-wrap"><label class="sr-only" for="specialDate">Fecha del día especial</label><input type="date" id="specialDate" value="2027-02-14" /><span>⌄</span></div>
+          <div class="countdown-numbers" aria-live="polite">
+            <div><strong id="daysLeft">000</strong><span>días</span></div><i>:</i><div><strong id="hoursLeft">00</strong><span>horas</span></div><i>:</i><div><strong id="minutesLeft">00</strong><span>min</span></div>
+          </div>
+          <div class="countdown-progress"><span id="countdownProgress"></span></div>
+          <p class="countdown-note" id="countdownNote">Cada día nos acerca un poquito más.</p>
+          <div class="mini-calendar" aria-hidden="true"><span>lu</span><span>ma</span><span>mi</span><span>ju</span><span>vi</span><span>sá</span><span>do</span><b></b><b></b><b></b><b></b><b></b><b></b><b class="today">14</b><b>15</b><b>16</b><b>17</b><b>18</b><b>19</b><b>20</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secret-section page-width">
+      <div class="poem-card">
+        <div class="poem-orbit orbit-one"></div><div class="poem-orbit orbit-two"></div>
+        <div class="poem-content">
+          <span class="card-kicker">Un secreto para ti</span>
+          <h2>Hay palabras que solo<br /><em>aparecen cuando amas.</em></h2>
+          <p id="poemText">Pulsa el botón y deja que el azar escriba un pequeño poema para ustedes.</p>
+          <button class="light-button" id="poemButton" type="button">Generar poema secreto <span>✦</span></button>
+        </div>
+        <div class="poem-side-note">p. 01 <span>♥</span></div>
+      </div>
+    </section>
+
+    <section class="map-section page-width">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow"><span></span> Paso 03</p>
+          <h2>El mapa de nosotros</h2>
+        </div>
+        <p>Marca esos lugares que guardan una historia. Haz clic sobre el mapa para añadir un recuerdo.</p>
+      </div>
+      <div class="map-layout">
+        <div class="map-card card-surface">
+          <div class="map-toolbar"><span class="map-legend"><i></i> Nuestros lugares</span><span class="map-hint">Haz clic para fijar</span></div>
+          <div class="memory-map" id="memoryMap" role="application" aria-label="Mapa virtual para fijar recuerdos">
+            <div class="map-river river-one"></div><div class="map-river river-two"></div><div class="map-road road-one"></div><div class="map-road road-two"></div>
+            <span class="map-label label-north">NORTE</span><span class="map-label label-coast">mar de recuerdos</span><span class="map-label label-city">nuestro rincón</span>
+            <div class="map-pin pin-one" style="left: 25%; top: 42%" data-label="La primera cita"><span>♥</span><b>La primera cita</b></div>
+            <div class="map-pin pin-two" style="left: 63%; top: 24%" data-label="Aquel viaje"><span>♥</span><b>Aquel viaje</b></div>
+            <div class="map-pin pin-three" style="left: 74%; top: 69%" data-label="Nuestra cafetería"><span>♥</span><b>Nuestra cafetería</b></div>
+          </div>
+          <div class="map-add-row"><input type="text" id="placeInput" placeholder="Nombre del recuerdo" maxlength="30" /><button class="dark-button" id="addPlaceButton" type="button">Añadir lugar <span>+</span></button></div>
+        </div>
+        <aside class="places-card card-surface">
+          <div class="places-header"><div><span class="card-kicker">Coordenadas del corazón</span><h3>Nuestros lugares</h3></div><span class="pin-count" id="pinCount">03</span></div>
+          <div class="places-list" id="placesList">
+            <button class="place-row active" type="button" data-target="pin-one"><span class="place-dot">♥</span><span><strong>La primera cita</strong><small>Donde todo comenzó</small></span><i>↗</i></button>
+            <button class="place-row" type="button" data-target="pin-two"><span class="place-dot">♥</span><span><strong>Aquel viaje</strong><small>Perdidos, pero juntos</small></span><i>↗</i></button>
+            <button class="place-row" type="button" data-target="pin-three"><span class="place-dot">♥</span><span><strong>Nuestra cafetería</strong><small>Domingos sin prisa</small></span><i>↗</i></button>
+          </div>
+          <div class="places-empty" id="placesEmpty" hidden><span>✦</span><p>Aún no hay nuevos lugares.<br />Añade uno desde el mapa.</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="closing-section page-width">
+      <div class="closing-line"></div>
+      <p>Hecha para ser compartida, guardada y abierta una y otra vez.</p>
+      <span class="closing-heart">♥</span>
+    </section>
+  </main>
+
+  <div class="envelope-modal" id="envelopeModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-envelope" id="modalEnvelope">
+      <button class="modal-close" type="button" data-close-modal aria-label="Cerrar carta">×</button>
+      <div class="modal-flap"></div>
+      <div class="modal-letter" id="modalLetter">
+        <span class="modal-kicker">Una carta para guardar por siempre</span>
+        <h2 id="modalTitle">Para mi persona favorita,</h2>
+        <p id="modalMessage">Escribe aquí unas palabras que se queden a vivir en el corazón...</p>
+        <div class="modal-signature">Con amor,<br /><strong id="modalSignature">tu persona</strong></div>
+        <div class="modal-date">14 · 02 · 2025</div>
+      </div>
+      <button class="modal-seal" id="modalSeal" type="button" aria-label="Cerrar la carta con el sello"><span>♥</span></button>
+      <p class="modal-instruction" id="modalInstruction">Tu carta está abierta · pulsa el sello para guardarla</p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
