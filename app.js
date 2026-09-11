@@ -193,12 +193,11 @@ window.setInterval(updateCountdown, 30000);
 
 // Secret poem generator.
 const poems = [
-  'Tu risa hace hogar en mi pecho,\ny tu nombre, primavera en mis días.',
-  'Si el mundo se detiene,\nque nos encuentre de la mano.',
-  'Te elegiría en cada mapa,\nen cada vida, en cada vuelta del sol.',
-  'Entre todos los lugares del mundo,\nmi sitio favorito siempre es contigo.',
-  'Guardé un pedacito de cielo\nen la forma exacta de tu abrazo.',
-  'No sé contar estrellas,\npero sí las veces que pienso en ti.'
+  'Consagré mi piel a lo invisible, \ny tu nombre la volvió verdad. \nNo necesito rezos ni liturgia, \nsi en tu abrazo encuentro eternidad.',
+'Hice de mi cuerpo un templo en silencio, \ny en ti encontré la forma de creer. \nNo preciso el rito de la misa entera, Insi en tu presencia todo es
+fe.'
+'Hice fila en el silencio para encontrarte, \ny al final de mis dudas levanté las manos\nal último suspiro, como quien ya no pide, Insino se entrega por completo.',
+'Desde que apareciste, las noches dejaron de sentirse vacías. \nAhora tienen tu nombre, tu recuerdo y esa extraña paz\nque deja pensar que, entre millones de personas, \nla vida tuvo la delicadeza de acercarme a ti.',
 ];
 $('#poemButton').addEventListener('click', () => {
   const poemText = $('#poemText');
@@ -273,3 +272,4 @@ function showToast(message) {
   window.clearTimeout(toastTimer);
   toastTimer = window.setTimeout(() => toast.classList.remove('show'), 2600);
 }
+Actualizar poemas de amor
