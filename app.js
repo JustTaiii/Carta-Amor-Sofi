@@ -180,7 +180,10 @@ function updateCountdown() {
   $('#daysLeft').textContent = String(days).padStart(3, '0');
   $('#hoursLeft').textContent = String(hours).padStart(2, '0');
   $('#minutesLeft').textContent = String(minutes).padStart(2, '0');
-  $('#countdownNote').textContent = distance <= 0 ? 'Hoy es nuestro día especial. ✦' : `Nos vemos el ${dateFormatter.format(target)}.`;
+  const isToday = target.toDateString() === now.toDateString();
+  $('#countdownNote').textContent = distance <= 0
+    ? (isToday ? 'Hoy es nuestro día especial. ✦' : `Nuestro día fue el ${dateFormatter.format(target)}. ✦`)
+    : `Nos vemos el ${dateFormatter.format(target)}.`;
   const progress = distance <= 0 ? 100 : Math.min(94, Math.max(12, 100 - (days / 365) * 100));
   $('#countdownProgress').style.width = `${progress}%`;
 }
